@@ -7,3 +7,14 @@ body{
   color: blueviolet;
   
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin:0;
+  background-color: antiquewhite;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}

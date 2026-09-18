@@ -30,14 +30,17 @@ export default App;*/
 import "./App.css";
 import Navbar from "./compenents/Navbar";
 import Hero from "./compenents/Hero";
+import EventSection from "./compenents/EventSection";
+import Footer from "./compenents/Footer";
 function App(){
   return(
     <div>
       <Navbar />
       <main id="home">
         <Hero />
+        <EventSection />
       </main>
-      
+      <Footer />
     </div>
   );
 }
