@@ -22,42 +22,80 @@
   color:azure;
   font-weight:bold;
 }*/
+:root {
+    --first-color: #f9ecec;
+    --second-color: #f0d9da;
+    --third-color: #c8d9eb;
+    --fourth-color: #ecf2f9;
+
+    --text-color: #333333;
+    --light-text: #666666;
+    --white: #ffffff;
+}
+
+/*NAVBAR */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 8%;
-    background-color: black;
-    color: white;
+    background-color: var(--third-color);
 }
 
-.navbar h2 {
-    margin: 0;
-}
 
-.nav-links a {
-    color: white;
+/* Logo / Brand */
+
+.brand-name {
+    color: var(--text-color);
     text-decoration: none;
-    margin-left: 25px;
-}
-
-.nav-links a:hover {
-    color: #ff7e67;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 
-/* Hero Section */
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+
+/* Hover */
+
+.nav-link:hover {
+    color: #666;
+}
+
+
+/* Active Page */
+
+.active-link {
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #555;
+}
+
+/*HERO*/
+
 .hero {
     text-align: center;
     padding: 90px 20px;
-    background-color: white;
-    color: #142d4c;
+    background-color: var(--fourth-color);
+    color: var(--text-color);
 }
 
 .hero-label {
     font-size: 14px;
-    color: #347474;
+    color: var(--light-text);
     margin-bottom: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -70,7 +108,7 @@
 }
 
 .hero-description {
-    color:  #42b883;
+    color: var(--light-text);
     font-size: 17px;
     margin-bottom: 30px;
 }
@@ -78,23 +116,23 @@
 .hero-button {
     display: inline-block;
     padding: 12px 25px;
-    background-color:#142d4c;
-    color: white;
+    background-color: var(--third-color);
+    color: var(--text-color);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 15px;
 }
 
 .hero-button:hover {
-    background-color: #ff7e67;
+    background-color: var(--second-color);
 }
 
-/* Event Form */
+/*EVENT FORM*/
 
 .event-form-section {
     padding: 60px 8%;
-    background-color: white;
-    color: #142d4c;
+    background-color: var(--first-color);
+    color: var(--text-color);
 }
 
 .event-form-section h2 {
@@ -104,7 +142,7 @@
 
 .event-form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 900px;
 }
@@ -118,24 +156,25 @@
     margin-bottom: 7px;
     font-size: 14px;
     font-weight: bold;
-    color: #142d4c;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     padding: 11px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid var(--second-color);
+    border-radius: 6px;
     font-size: 14px;
     font-family: inherit;
+    background-color: var(--white);
+    color: var(--text-color);
     outline: none;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #42b883;
+    border-color: var(--third-color);
 }
 
 .form-group textarea {
@@ -149,7 +188,7 @@
 
 .form-error {
     grid-column: span 2;
-    color: #ff7e67;
+    color: #b85c5c;
     font-size: 14px;
     margin: 0;
 }
@@ -157,37 +196,51 @@
 .submit-button {
     width: fit-content;
     padding: 11px 22px;
-    background-color: #142d4c;
-    color: white;
+    background-color: var(--third-color);
+    color: var(--text-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 15px;
 }
 
 .submit-button:hover {
-    background-color: #ff7e67;
+    background-color: var(--second-color);
 }
 
-
-/* Event Section */
+/*EVENTS SECTION*/
 
 .events-section {
     padding: 70px 8%;
-    background-color: #f5f5f5;
-    color: #142d4c;
+    background-color: var(--fourth-color);
+    color: var(--text-color);
+}
+
+
+/* Section Heading */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
 }
 
 .section-label {
-    color: #42b883;
+    color: var(--light-text);
     font-size: 14px;
-    margin-bottom: 10px;
+    margin: 0 0 8px 0;
     letter-spacing: 1px;
 }
 
-.events-section h2 {
+.section-heading h2 {
+    margin: 0;
     font-size: 32px;
-    margin-bottom: 35px;
+}
+
+.section-heading > p {
+    color: var(--light-text);
+    font-size: 14px;
 }
 
 
@@ -203,76 +256,64 @@
 /* Event Card */
 
 .event-card {
-    background-color: white;
+    background-color: var(--white);
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--second-color);
     border-radius: 8px;
 }
 
-
-/* Category */
-
 .event-category {
-    color: #42b883;
+    color: var(--light-text);
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-
-/* Event Title */
-
 .event-card h3 {
-    margin: 10px 0;
+    color: var(--text-color);
     font-size: 22px;
-    color: #142d4c;
+    margin: 10px 0;
 }
-
-
-/* Description */
 
 .event-description {
-    color: #555;
+    color: var(--light-text);
     line-height: 1.5;
-    margin-bottom: 20px;
 }
 
-
-/* Date, Time, Location */
+.event-details {
+    margin-top: 20px;
+}
 
 .event-details p {
-    margin: 8px 0;
-    color: #555;
+    color: var(--light-text);
     font-size: 14px;
+    margin: 8px 0;
 }
 
 .event-details strong {
-    color: #142d4c;
+    color: var(--text-color);
 }
-
-
-/* Button */
 
 .event-card button {
     margin-top: 15px;
     padding: 10px 18px;
-    background-color: #142d4c;
-    color: white;
+    background-color: var(--third-color);
+    color: var(--text-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .event-card button:hover {
-    background-color: #ff7e67;
+    background-color: var(--second-color);
 }
 
-/*footer section*/
+/*FOOTER*/
 
 .footer {
     text-align: center;
     padding: 40px 20px;
-    background-color: #142d4c;
-    color: #ff7e67;
+    background-color: var(--second-color);
+    color: var(--text-color);
 }
 
 .footer h2 {
@@ -280,72 +321,113 @@
 }
 
 .footer p {
-    color: #42b883;
+    color: var(--light-text);
     margin: 8px 0;
     font-size: 14px;
 }
 
+/*TABLET RESPONSIVE*/
 
-/* Responsive Design */
-
-/* Tablet */
 @media (max-width: 900px) {
 
     .navbar {
         padding: 18px 5%;
     }
 
+    .hero h1 {
+        font-size: 38px;
+    }
+
     .event-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero h1 {
-        font-size: 38px;
+    .event-form-section,
+    .events-section {
+        padding-left: 6%;
+        padding-right: 6%;
     }
 }
 
 
-/* Mobile */
+/*MOBILE RESPONSIVE*/
+
 @media (max-width: 600px) {
 
     /* Navbar */
+
     .navbar {
         flex-direction: column;
         gap: 15px;
         padding: 18px 5%;
-        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
     }
 
     .nav-links a {
-        margin: 0 8px;
         font-size: 14px;
     }
 
 
     /* Hero */
+
     .hero {
         padding: 60px 20px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .hero-description {
         font-size: 15px;
+        line-height: 1.5;
     }
 
-    .hero-button {
-        padding: 10px 20px;
+
+    /* Event Form */
+
+    .event-form-section {
+        padding: 45px 5%;
+    }
+
+    .event-form-section h2 {
+        font-size: 26px;
+    }
+
+    .event-form {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .form-error {
+        grid-column: span 1;
+    }
+
+    .submit-button {
+        width: 100%;
     }
 
 
     /* Events */
+
     .events-section {
         padding: 50px 5%;
     }
 
-    .events-section h2 {
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .section-heading h2 {
         font-size: 27px;
     }
 
@@ -358,33 +440,9 @@
         padding: 20px;
     }
 
-    @media (max-width: 900px) {
-    .event-form {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .event-form {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width,
-    .form-error {
-        grid-column: span 1;
-    }
-
-    .event-form-section {
-        padding: 40px 5%;
-    }
-
-    .submit-button {
-        width: 100%;
-    }
-}
-
 
     /* Footer */
+
     .footer {
         padding: 35px 20px;
     }
